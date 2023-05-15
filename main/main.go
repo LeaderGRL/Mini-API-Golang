@@ -19,7 +19,7 @@ func main() {
 }
 
 func getUsers(w http.ResponseWriter, r *http.Request) {
-	db, err := sql.Open("sqlite3", "../test.db")
+	db, err := sql.Open("sqlite3", "../DB/test.db")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -47,7 +47,7 @@ func getUsers(w http.ResponseWriter, r *http.Request) {
 }
 
 func CreateUser(w http.ResponseWriter, r *http.Request) {
-	db, err := sql.Open("sqlite3", "../test.db")
+	db, err := sql.Open("sqlite3", "../DB/test.db")
 	if err != nil {
 		log.Fatal(err)
 	}
